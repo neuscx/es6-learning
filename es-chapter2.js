@@ -1,4 +1,4 @@
-function es-chapter2 () {
+function es_chapter2 () {
 	// 2.1 let和const
     // var   特性：变量提升   并不是块级变量   
     // let   特性：变量不提升 是严格的块级变量 存在暂时性死区
