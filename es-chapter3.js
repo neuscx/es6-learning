@@ -1,5 +1,5 @@
 function es_chapter3 () {
-    // 3.1 数组的结构赋值
+    // 3.1 数组的解构赋值
     // ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。
     if (true) {    
         let [a, b, c] = [1, 2, 3];              // 这是es6新兴写法
@@ -35,7 +35,46 @@ function es_chapter3 () {
         }
         let [x = f()] = [1];
         // 上面的代码因为x可以直接取到值1，所以并不会走f()流程，所以不会有log出来
-
-        // 
     }
+
+
+
+
+    // 3.2 对象的解构赋值
+    if (true) {
+        // 对象的属性没有次序，变量必须与属性同名，才能取到正确的值。
+        var { a, b } = { a: "aaa", b: "bbb" };  // a: aaa  b: bbb
+        var { a } = { a: "aaa", b: "bbb" };     // a: undefined
+        var { a: b } = { a: 'aaa', b: 'bbb' };  // b: aaa，对应的是a: b = a: 'aaa' === b = 'aaa'，a: undefined
+        // 对象结构实际的形式如下，属性名称只是起了对照的作用
+        var { a: a, b: b } = { a: 'aaa', b: 'bbb' };
+        
+        var node = { loc: { start: {
+            line: 1,
+            column: 5
+        }}};
+        var { loc: { start: { line }} } = node;
+        // line: 1, loc: undefined, start: undefined。因为loc、start都是模式，不是变量
+
+        let obj = {};
+        let arr = [];
+        ({ foo: obj.prop, bar: arr[0] } = { foo: 123, bar: true });    // obj: {prop:123}   arr: [true]
+        
+    }
+
+
+
+
+    // 3.1 数组的解构赋值
+
+
+    // 3.1 数组的解构赋值
+
+    // 3.1 数组的解构赋值
+
+    // 3.1 数组的解构赋值
+
+    // 3.1 数组的解构赋值
+
+    // 3.1 数组的解构赋值
 }
